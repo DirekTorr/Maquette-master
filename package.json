@@ -1,0 +1,42 @@
+{
+  "name": "Maquette6Avril",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node -e \"console.log('open browser at http://localhost:8081/vr/\\n\\n');\" && node node_modules/react-native/local-cli/cli.js start",
+    "bundle": "node node_modules/react-vr/scripts/bundle.js && sh scripts/copy-assets.sh",
+    "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
+    "devtools": "react-devtools",
+    "test": "jest",
+    "deploy": "node scripts/deploy.js"
+  },
+  "dependencies": {
+    "live-tour-lab": "^0.2.2",
+    "ovrui": "~2.0.0",
+    "prop-types": "^15.6.2",
+    "react": "16.0.0",
+    "react-audio-player": "^0.17.0",
+    "react-native": "~0.48.0",
+    "react-native-sound": "^0.11.2",
+    "react-player": "^2.10.0",
+    "react-sound": "^1.2.0",
+    "react-vr": "~2.0.0",
+    "react-vr-web": "~2.0.0",
+    "three": "^0.87.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "babel-preset-react-native": "^1.9.1",
+    "gh-pages": "^3.2.3",
+    "jest": "^19.0.2",
+    "react-devtools": "^2.5.2",
+    "react-test-renderer": "16.0.0",
+    "webpack": "^5.71.0",
+    "webpack-dev-server": "^4.8.0",
+    "xopen": "1.0.0"
+  },
+  "jest": {
+    "preset": "react-vr"
+  }
+}
